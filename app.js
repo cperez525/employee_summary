@@ -1,4 +1,4 @@
-// 
+// Import dependencies/classes
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -6,6 +6,7 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
+// Create folder path for created html file later
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
@@ -15,11 +16,15 @@ const render = require("./lib/htmlRenderer");
 const Choice = require("inquirer/lib/objects/choice");
 const { type } = require("os");
 
+// Instantiate employees array to store created employees for passing into render function
 const employees = []
 
+// Main app function to create employees for team
 function createTeam() {
 
     inquirer
+
+        // Prompts for user to provide information about employee
         .prompt([
 
             {
@@ -48,6 +53,7 @@ function createTeam() {
             },
         ]).then((answers) => {
 
+            // Asks additional prompt depending on the role selected for the employee created, then asks if user wants to create additional user
             switch (answers.role) {
 
                 case "Manager":
@@ -111,6 +117,7 @@ function createTeam() {
         })
 }
 
+// Function asking user if they want to create additional user
 function continueTeam() {
 
     inquirer
@@ -123,6 +130,8 @@ function continueTeam() {
             }
         ]).then((answers) => {
 
+            // Loops user back to createTeam function if they choose "Yes";
+            // If user chooses "No", creates output folder if one doesn't already exists, and writes team.html file in that folder based on employee array
             if (answers.continue === "Yes") {
 
                 createTeam()
