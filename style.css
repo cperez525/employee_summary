@@ -1,0 +1,29 @@
+.team-area {
+
+    justify-content: space-evenly;
+}
+
+.employee-card {
+
+    border: black 2px solid;
+}
+.card-header {
+
+    color: black;
+    font-weight: 600;
+}
+
+.manager-header {
+
+    background-color: red;
+}
+
+.engineer-header {
+
+    background-color: skyblue;
+}
+
+.intern-header {
+
+    background-color: burlywood;
+}
