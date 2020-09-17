@@ -42,7 +42,9 @@ function createTeam() {
             {
                 type: "input",
                 name: "email",
-                message: "What is this employee's email address?"
+                message: "What is this employee's email address?",
+                // source of email validation expression: https://gist.github.com/Amitabh-K/ae073eea3d5207efaddffde19b1618e8
+                validate: input => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input)               
             },
 
             {
