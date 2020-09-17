@@ -1,4 +1,4 @@
-# Team Builder ![license badge](https://img.shields.io/static/v1?label=license&message=MITLicense&color=red) ![langauge count badge](https://img.shields.io/github/languages/count/cperez525/employee_summary) ![top language use](https://img.shields.io/github/languages/top/cperez525/employee_summary)  
+# Team Builder ![license badge](https://img.shields.io/static/v1?label=license&message=MITLicense&color=red) ![langauge count badge](https://img.shields.io/github/languages/count/cperez525/team_builder) ![top language use](https://img.shields.io/github/languages/top/cperez525/team_builder)  
   This application serves as an easy-to-use way of building a diagram displaying all members of a team by job position.
 
   ## Table of Contents
