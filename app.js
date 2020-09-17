@@ -40,7 +40,7 @@ function createTeam() {
             {
                 type: "list",
                 name: "role",
-                message: "What kind of employee would you like to add?",
+                message: "What is this employee's position?",
                 choices: ["Manager", "Engineer", "Intern"]
             },
         ]).then((answers) => {
