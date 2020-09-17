@@ -130,9 +130,30 @@ function continueTeam() {
 
                 if (!fs.existsSync(OUTPUT_DIR)){
 
-                    fs.mkdir(OUTPUT_DIR)
+                    fs.mkdir(OUTPUT_DIR, function(err) {
+
+                        if (err) {
+
+                            console.log(err)
+                        }
+                    })
+                    fs.writeFile(outputPath, render(employees), "utf-8", function(err) {
+
+                        if (err) {
+
+                            console.log(err)
+                        }
+                    })
+                } else {
+
+                    fs.writeFile(outputPath,render(employees), "utf-8", function(err) {
+                        
+                        if (err) {
+                            
+                            console.log(err)
+                        }
+                    })
                 }
-                render(employees)
             }
         })
 }
