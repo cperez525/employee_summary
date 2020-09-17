@@ -126,7 +126,6 @@ function continueTeam() {
             } else {
 
                 console.log("Thank you for providing this team's information!")
-                console.log(employees)
 
                 if (!fs.existsSync(OUTPUT_DIR)){
 
